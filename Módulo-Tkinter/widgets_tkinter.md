@@ -306,16 +306,30 @@ Exemplo:
 ```python
 In[]:
 
-    from tkinter import *
+import tkinter as tk
+from tkinter import ttk
 
+app = tk.Tk()
+app.geometry('200x100')
+labelTop = tk.Label(app, text = "Mês de Aniversário")
+labelTop.grid(column=0, row=0)
+comboExample = ttk.Combobox(app, values = [
+                                            "Janeiro",
+                                            "Fevereiro",
+                                            "Março",
+                                            "Abril",
+                                            "Maio",
+                                            "Junho",
+                                            "Julho",
+                                            "Agosto",
+                                            "Setembro",
+                                            "Outubro",
+                                            "Novembro",
+                                            "Dezembro",] )
 
-    top = Tk()
-    L1 = Label(top, text="Nome da empresa: ")
-    L1.pack( side = LEFT)
-    E1 = Entry(top, bd =5)
-    E1.pack(side = RIGHT)
+comboExample.grid(column = 0, row = 1)
+app.mainloop()
 
-    top.mainloop()
 ```
 ```python
 Out[]
